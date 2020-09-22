@@ -3,11 +3,11 @@ from facenet_pytorch import MTCNN, InceptionResnetV1
 
 class CenterFaceAlign(object):
 
-    def __init__(self):
+	def __init__(self):
 		self.mtcnn = MTCNN(post_process=False)
 
 
-    def __call__(self,image,to_tensor=False):
+	def __call__(self,image,to_tensor=False):
 		return self.mtcnn(image)
 
 class FaceMatch(object):
