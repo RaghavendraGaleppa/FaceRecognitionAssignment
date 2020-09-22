@@ -10,7 +10,7 @@ if len(sys.argv) < 3:
 	raise ValueError(f"Usage: python3 match_faces.py file_1.jpg file_2.jpg")
 
 file_1 = sys.argv[1]
-file_1 = sys.argv[2]
+file_2 = sys.argv[2]
 
 img_1 = cv2.imread(file_1)
 img_2 = cv2.imread(file_2)
