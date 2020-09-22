@@ -22,5 +22,5 @@ img_2 = face_align(img_2)/255.0
 img_1 = torch.from_numpy(img_1)
 img_2 = torch.from_numpy(img_2)
 
-face_matcher = FaceMatch(PATH="model.ht")
+face_matcher = FaceMatch(PATH="model_cpu.ht")
 face_matcher(img_1, img_2)
