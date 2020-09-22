@@ -14,7 +14,7 @@ class FaceMatch(object):
 
 	def __init__(self, PATH):
 		
-		self.model = InceptionResnetV1(pretrained=False,classify=True,
+		self.model = InceptionResnetV1(pretrained=True,classify=True,
 				num_classes=3964)
 		saved_checkpoint = torch.load(PATH)
 		self.model.classify = False
