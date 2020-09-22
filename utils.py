@@ -23,7 +23,7 @@ class FaceMatch(object):
 		# load model	
 
 	def __call__(self, image_1, image_2):
-		out = self.model(torch.stack(image_1, image_2)).detach()
+		out = self.model(torch.stack((image_1, image_2))).detach()
 		distance = (out[0] - out[1]).norm()
 		if distance < 0.8:
 			print(f"The faces match")
