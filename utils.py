@@ -8,7 +8,7 @@ class CenterFaceAlign(object):
 
 
 	def __call__(self,image,to_tensor=False):
-		return self.mtcnn(image).detach.numpy().squeeze()
+		return self.mtcnn(image).detach().numpy().squeeze()
 
 class FaceMatch(object):
 
